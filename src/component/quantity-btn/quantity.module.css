@@ -1,0 +1,18 @@
+.selector{
+    outline: 2px solid green;
+    display:flex;
+    flex-direction: row;
+    width: max-content;
+    border-radius: 10px;
+    
+}
+
+
+.selectorBtn{
+    background-color: rgb(233, 233, 233);
+    padding: 5px;
+}
+
+.selectorInput{
+    text-align: center;
+}

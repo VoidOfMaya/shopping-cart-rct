@@ -1,15 +1,14 @@
 import { Link } from "react-router"
+import styles from'./nav.module.css'
 
 const TopNav = () =>{
     return(
         <nav>
-            <div>myShop</div>
-
-            <ul>
-                <li><Link to={'/'}>Home</Link></li>
-                <li><Link to={'Store'}>Store</Link></li>
-                <li><Link to={'Cart'}>Cart</Link></li>
-            </ul>
+            <div className={styles.branding}>myShop</div>
+            <Link to={'/'} className="navLink">Home</Link>
+            <Link to={'Store'} className="navLink">Store</Link>
+            <Link to={'Cart'} className="navLink">Cart</Link>
+            
         </nav>
     )
 }

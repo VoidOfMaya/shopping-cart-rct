@@ -1,0 +1,13 @@
+nav {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+
+}
+.branding{
+    margin-right: 40%;
+}
+a:hover{
+    background-color: rgb(123, 191, 255);
+    
+}

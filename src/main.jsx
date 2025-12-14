@@ -1,11 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router'
-import './index.css'
+import '../src/component/styles/styles.css'
 import { Home } from './component/Home-page/home'
 import { Store } from './component/Store-page/store'
 import { Cart } from './component/Cart-page/cart'
-import { TopNav } from './component/nav-bar/top-nav'
 import { App } from './App'
 
 //handle page routing
