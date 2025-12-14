@@ -14,17 +14,22 @@ const QuantityBtn = () =>{
         setQuantity(prev =>{return prev - 1})
     }
     return(
-        <div className={styles.selector}>
+        <div className={styles.selector} 
+             aria-label="Select item quantity"
+             >
             <button className={styles.selectorBtn}
-                    onClick={handleIncrement}>+</button>
+                    onClick={handleIncrement}
+                    aria-label="Increase item quantity">+</button>
 
             <input type="number" 
                    value={quantity}     
                    className={styles.selectorInput}
+                   aria-label="Item quantity"
                    onChange={onChangeHandler}></input>
 
             <button className={styles.selectorBtn}
-                    onClick={handleDecremnt}>-</button>
+                    onClick={handleDecremnt}
+                    aria-label="Decrease item quantity">-</button>
         </div>
     )
 }
