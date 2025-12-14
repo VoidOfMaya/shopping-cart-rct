@@ -6,12 +6,13 @@ import App from './App.jsx'
 
 //handle page routing
 const router =createBrowserRouter([
-  { path: '/', element:<div></div>, errorElement:<div></div>},
+  { path: '/', element:<App/>, errorElement:<div></div>},
   //otherpages go here
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+
     <RouterProvider router={router}/>
   </StrictMode>,
 )
