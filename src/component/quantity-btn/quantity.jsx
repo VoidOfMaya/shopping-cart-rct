@@ -11,7 +11,12 @@ const QuantityBtn = () =>{
         setQuantity(prev =>{return prev + 1})
     }
     const handleDecremnt = () =>{
-        setQuantity(prev =>{return prev - 1})
+        setQuantity(prev =>{
+            if(prev > 1){
+                return prev - 1
+            }
+            return prev
+        })
     }
     return(
         <div className={styles.selector} 
