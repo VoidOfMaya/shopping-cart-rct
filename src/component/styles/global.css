@@ -1,0 +1,124 @@
+/*Global reseter*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol {
+  list-style: none;
+}
+input,
+button,
+textarea,
+select {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.1;
+}
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* Remove button borders in some browsers */
+button:focus {
+  outline: none;
+}
+/* Remove input styles */
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+/* Remove form element spacing */
+input,
+textarea,
+select,
+button {
+  margin: 0;
+  padding: 0;
+}
+/* Set a sensible default font */
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+/* Set default background color for HTML */
+html {
+  background-color: #fff;
+}
+/* Reset vertical alignment issues in flexbox */
+figcaption,
+figure,
+main {
+  display: block;
+}
+/* Allow elements to take up full width */
+* {
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Normalize the `button` element to inherit styles from its parent */
+button {
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+/* Global scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+/* Basic box-shadow reset (to remove default shadows in browsers like Firefox) */
+* {
+  box-shadow: none;
+}
+/* Remove appearance for form elements in webkit browsers */
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/* Prevent extra spacing around elements that are empty or have inline-block display */
+span,
+i,
+strong,
+b {
+  display: inline-block;
+}
+/*font set*/
+
+/* global color scheme*/

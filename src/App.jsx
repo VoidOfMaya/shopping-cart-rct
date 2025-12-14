@@ -1,12 +1,20 @@
-import { useState } from 'react'
-import './App.css'
+import { Home } from './component/Home-page/home'
+import { Store } from './component/Store-page/store'
+import { Cart } from './component/Cart-page/cart'
+import { TopNav } from './component/nav-bar/top-nav'
+import { Outlet } from 'react-router'
 
-function App() {
+const App = () =>{
 
-  return (
-    <>
-    </>
-  )
+    return(
+        <>
+            <TopNav />
+            <div>
+                <Outlet/>
+            </div>
+        </>
+    )
 }
-
-export default App
+export{
+    App,
+}

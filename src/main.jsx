@@ -1,18 +1,30 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router'
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router'
 import './index.css'
-import App from './App.jsx'
+import { Home } from './component/Home-page/home'
+import { Store } from './component/Store-page/store'
+import { Cart } from './component/Cart-page/cart'
+import { TopNav } from './component/nav-bar/top-nav'
+import { App } from './App'
 
 //handle page routing
+
 const router =createBrowserRouter([
-  { path: '/', element:<App/>, errorElement:<div></div>},
+  { path: '/', element:<App />,
+    children: [
+      { path: '/', element: <Home />},
+      { path: 'Store', element: <Store />},
+      { path: 'Cart', element: <Cart />},
+    ],
+    errorElement:<div> Error 404!</div>},
+
   //otherpages go here
 ])
+  
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-
-    <RouterProvider router={router}/>
+   <RouterProvider router={router}/>
   </StrictMode>,
 )
