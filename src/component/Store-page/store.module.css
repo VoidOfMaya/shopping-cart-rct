@@ -1,11 +1,19 @@
 .storePage{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr;
-    background-color: aquamarine;
+    grid-template-rows: auto auto;
+    background-color: #F8F9FA;
+
 
     
 }
 .title{
+    justify-self: center;
+}
+.cardContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-rows: auto ;
+    max-width: 1500px;
     justify-self: center;
 }

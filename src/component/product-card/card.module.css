@@ -1,8 +1,15 @@
 .card{
-    width: 220px;
+    width: 330px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 8px 8px 38px -36px rgba(66, 68, 90, 1);
+    padding:  10px;
+    margin: 10px;
+
 }
 .photo{
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     object-fit: contain;
+    margin-bottom:  10px;
 }

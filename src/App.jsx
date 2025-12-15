@@ -10,6 +10,7 @@ const App = () =>{
             <div className='pageContainer'>
                 <Outlet/>
             </div>
+            <footer>Footer holder</footer>
         </div>
     )
 }

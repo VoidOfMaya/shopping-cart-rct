@@ -1,40 +1,25 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import PropType from 'prop-types';
 import style from './card.module.css';
 
-const Card = () =>{
-    const [item, setItem] = useState({});
-    const [error, setError] = useState(null);
-    const [loading, setLoading]= useState(true); 
+const Card = ({id, photo, name, price, info, rating}) =>{
 
-    useEffect(()=>{
-        const controller = new AbortController();
-        fetch('https://fakestoreapi.com/products/1')
-            .then(response =>{
-                if(response.status >= 400){
-                    throw new Error('server error');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log(data)
-                setItem(data)
-            })
-            .catch(error => setError(error))  
-            .finally(()=> setLoading(false));
-            return ()=> controller.abort();  
-    },[])
     return(
         <div className={style.card}>
-            <img src={item.image} 
-            alt={item.title}
-            className={style.photo}></img>
-            <h3>{item.title}</h3>
-            <h4>{item.price}$</h4>
-            <p>{item.description}</p>
-    
+            <img src={photo} alt={name} className={style.photo}></img>
+            <h3>{name}</h3>
+            <h2>{price}$</h2>
         </div>
     )
 }
+Card.prototype ={
+    name:  PropType.string,
+    price: PropType.number,
+    photo: PropType.string,
+    info:  PropType.string,
+    rating:PropType.object
+}
+
 export{
     Card
 }
