@@ -1,4 +1,5 @@
 nav {
+    z-index: 2;
     position: fixed;
     background-color: #007BFF;
     display: flex;

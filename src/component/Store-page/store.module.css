@@ -15,3 +15,11 @@
     max-width: 1500px;
     justify-self: center;
 }
+.card{
+    transform: scale(1);
+    transition: transform 1s ease-out 0s;
+}
+
+.card:hover{
+    transform: scale(1.2);
+}

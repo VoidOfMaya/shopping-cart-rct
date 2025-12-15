@@ -1,3 +1,4 @@
+/*static*/
 .card{
     width: 330px;
     background-color: #FFFFFF;
@@ -5,11 +6,23 @@
     box-shadow: 8px 8px 38px -36px rgba(66, 68, 90, 1);
     padding:  10px;
     margin: 10px;
-
 }
 .photo{
     height: 300px;
     width: 300px;
     object-fit: contain;
     margin-bottom:  10px;
+}
+.cardInfo{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+
+}
+.name{
+    justify-self: center;
+}
+.price{
+    color: #28A745;
+    text-align: end;
 }

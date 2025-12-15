@@ -18,6 +18,7 @@ const Store = () =>{
             price={item.price} 
             info={item.description} 
             rating={item.rating}
+            className={style.card}
 
             />
             
