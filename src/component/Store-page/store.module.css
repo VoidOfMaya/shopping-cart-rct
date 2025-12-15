@@ -1,0 +1,11 @@
+.storePage{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    background-color: aquamarine;
+
+    
+}
+.title{
+    justify-self: center;
+}

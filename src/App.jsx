@@ -5,12 +5,12 @@ import { Outlet } from 'react-router'
 const App = () =>{
 
     return(
-        <>
+        <div className='appContainer'>
             <TopNav />
             <div className='pageContainer'>
                 <Outlet/>
             </div>
-        </>
+        </div>
     )
 }
 export{
