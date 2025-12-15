@@ -3,9 +3,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     background-color: #F8F9FA;
-
-
-    
+    padding-top: 70px;
 }
 .title{
     justify-self: center;

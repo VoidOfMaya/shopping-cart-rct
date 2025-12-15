@@ -1,11 +1,28 @@
 nav {
-    background-color: red;
+    position: fixed;
+    background-color: #007BFF;
     display: flex;
     flex-direction: row;
-
 }
 .branding{
     margin-right: 40%;
+    align-self:center ;
+}
+.navLink{
+    padding: 20px;
+    color: #FFFFFF;
+    justify-self: center;
+    text-align: center;
+    
+}
+.cartItems{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    transform:  translate(55px, 5px);
+    border-radius: 15px;
+    background-color: red;
+    
 }
 a:hover{
     background-color: rgb(123, 191, 255);
