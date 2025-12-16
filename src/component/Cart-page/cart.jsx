@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router"
+import { QuantityBtn } from "../quantity-btn/quantity";
 
 import style from './cart.module.css';
 
@@ -9,7 +10,7 @@ const Cart = () =>{
 
     const handleDisplay = () =>{
         if (items.length > 0){
-            return items.map(item=><div>{item.name} - {item.price}$</div>)
+            return items.map(item=><div>{item.name} - {item.price}$  <QuantityBtn quantity={item.quantity}/></div>)
         }else{
             return<div>Cart is empty</div>
         }
@@ -18,7 +19,7 @@ const Cart = () =>{
     const totalCost = () =>{
         let amount = 0;
         items.forEach(item=>{
-            amount = amount + item.price
+            amount = amount + (item.price * item.quantity)
         })
         return amount
     } 
