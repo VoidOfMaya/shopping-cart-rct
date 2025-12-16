@@ -1,0 +1,6 @@
+.cartContainer{
+    outline: 1px solid green;
+    transform: translateY(65px);
+    justify-self: center;
+    align-self: center;
+}
