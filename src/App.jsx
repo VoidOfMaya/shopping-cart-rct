@@ -4,24 +4,20 @@ import { Outlet } from 'react-router'
 import { useState } from 'react'
 
 const App = () =>{
-    const [cartItems, setCartItems]= useState(null)
+    const [cartItems, setCartItems]= useState([])
 
     const countItems=()=>{
-        if(cartItems){
-           return cartItems.length;
-        }else{
-            return 0;
-        }
+        return cartItems.length;
     }
     const addItemToCart = (item) =>{
-        setCartItems(item)
+        setCartItems((prevItem)=> [...prevItem, item]);
     }
 
     return(
         <div className='appContainer'>
             <TopNav cart={countItems()}/>
             <div className='pageContainer'>
-                <Outlet/>
+                <Outlet context={{cartItems, addItemToCart}}/>
             </div>
             <footer>Footer holder</footer>
         </div>

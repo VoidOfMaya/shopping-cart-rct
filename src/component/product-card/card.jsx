@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react";
+import { useOutletContext } from "react-router";
 import { QuantityBtn } from "../quantity-btn/quantity";
 import PropType from 'prop-types';
 import style from './card.module.css';
 
 const Card = ({id, photo, name, price, info, rating}) =>{
+
     const [hover, setHover]= useState(false)
-    //handles quantity state for quantitybtn
-    const [quantity, setQuantity]= useState(1)
-    //takes item id, title, price, quantity{set by Quantitybtn}
-    const [ itemToAdd, setItemToAdd]= useState({});
+    const [quantity, setQuantity]= useState(1)    //handles quantity state for quantitybtn
+    //cartcontext
+    const { addItemToCart} = useOutletContext();
 
     const handleQuantity =(number)=>{
         setQuantity(number)
     }
     const handleAddItem =(item)=>{
         //setItemToAdd({id, photo, name, price, quantity})
+        addItemToCart(item)
         console.log(item);
     }
 
