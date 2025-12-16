@@ -5,21 +5,15 @@ import style from './card.module.css';
 
 const Card = ({id, photo, name, price, info, rating}) =>{
     const [hover, setHover]= useState(false)
-    const isInterested = (interest = false) =>{
-        if(interest){
-            console.log('entered card');
-            return(
-                <>
-                    <button aria-label="Add to cart">add to cart</button>
-                    <div>set number to add</div>
-                </>
-            )
-        }
-        else{
-            console.log('exited card');
-            return
-        }
+    //handles quantity state for quantitybtn
+    const [quantity, setQuantity]= useState(1)
+    //takes item id, title, price, quantity{set by Quantitybtn}
+    const [ itemToAdd, setItemToAdd]= useState(null);
+
+    const handleQuantity =(number)=>{
+        setQuantity(number)
     }
+
     return(
         <div className={style.card}
              onMouseEnter={()=>setHover(true)}
@@ -32,7 +26,7 @@ const Card = ({id, photo, name, price, info, rating}) =>{
             </div>
             {hover &&(
                 <div className={style.addToCart}>
-                    <QuantityBtn className={style.addQuantity} aria-label="Add to cart"/>
+                    <QuantityBtn handleQuantity={handleQuantity} quantity={quantity} className={style.addQuantity} aria-label="Add to cart"/>
                     <button aria-label="Add to cart">add to cart</button>
                 </div>
             )}
