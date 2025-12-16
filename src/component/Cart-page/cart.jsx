@@ -8,9 +8,12 @@ const Cart = () =>{
     const {cartItems }= useOutletContext();
     const [items, setItems]= useState(cartItems);
 
+    const handleQuantity =(number)=>{
+        setItems(prev =>{})
+
     const handleDisplay = () =>{
         if (items.length > 0){
-            return items.map(item=><div>{item.name} - {item.price}$  <QuantityBtn quantity={item.quantity}/></div>)
+            return items.map(item=><div>{item.name} - {item.price}$  <QuantityBtn handleQuantity={handleQuantity} quantity={item.quantity}/></div>)
         }else{
             return<div>Cart is empty</div>
         }
