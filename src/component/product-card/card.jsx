@@ -13,6 +13,9 @@ const Card = ({id, photo, name, price, info, rating}) =>{
     const handleQuantity =(number)=>{
         setQuantity(number)
     }
+    const handleAddItem =()=>{
+        setItemToAdd({id, photo, name, price, quantity})
+    }
 
     return(
         <div className={style.card}
@@ -27,7 +30,10 @@ const Card = ({id, photo, name, price, info, rating}) =>{
             {hover &&(
                 <div className={style.addToCart}>
                     <QuantityBtn handleQuantity={handleQuantity} quantity={quantity} className={style.addQuantity} aria-label="Add to cart"/>
-                    <button aria-label="Add to cart">add to cart</button>
+                    <button 
+                    aria-label="Add to cart"
+                    onClick={handleAddItem}
+                    >add to cart</button>
                 </div>
             )}
         </div>

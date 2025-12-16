@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import PropType from 'prop-types';
 import styles from './quantity.module.css'
 
 const QuantityBtn = ({handleQuantity, quantity}) =>{
@@ -6,19 +6,20 @@ const QuantityBtn = ({handleQuantity, quantity}) =>{
 
     const onChangeHandler = (e) =>{
         //setQuantity(Number(e.target.value));
-        handleQuantity(Number(e.target.value))
+        const input = Number(e.target.value);
+        handleQuantity(input) 
     }
     const handleIncrement = () =>{
-        //setQuantity(prev =>{return prev + 1})
-        handleQuantity(prev =>{return prev + 1})
+
+        handleQuantity(prev =>{
+            if(prev < 20){
+                return prev + 1
+            }
+            return prev 
+        })
     }
     const handleDecremnt = () =>{
-        //setQuantity(prev =>{
-        //    if(prev > 1){
-        //        return prev - 1
-        //    }
-        //    return prev
-        //})
+
         handleQuantity(prev =>{
             if(prev > 1){
                 return prev - 1
@@ -35,16 +36,20 @@ const QuantityBtn = ({handleQuantity, quantity}) =>{
                     aria-label="Increase item quantity">+</button>
 
             <input type="number" 
-                   value={quantity}     
+                   value={quantity}   
                    className={styles.selectorInput}
                    aria-label="Item quantity"
-                   onChange={onChangeHandler}></input>
+                   ></input>
 
             <button className={styles.selectorBtn}
                     onClick={handleDecremnt}
                     aria-label="Decrease item quantity">-</button>
         </div>
     )
+}
+QuantityBtn.PropTyps ={
+    quantity: PropType.Number,
+    handleQuantity: PropType.func,
 }
 export {
     QuantityBtn,
