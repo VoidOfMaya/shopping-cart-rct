@@ -1,10 +1,12 @@
+import { useState } from "react";
+import { useOutletContext } from "react-router"
 
 const Cart = () =>{
-    return(
-        <>
+    const {cartItems }= useOutletContext();
+    const [items, setItems]= useState(cartItems);
 
-            <div>Cart Page</div>
-        </>
+    return(
+         <div>You Cart is empty</div>    
     )
 }
 export {
