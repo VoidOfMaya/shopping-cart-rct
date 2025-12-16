@@ -8,13 +8,14 @@ const Card = ({id, photo, name, price, info, rating}) =>{
     //handles quantity state for quantitybtn
     const [quantity, setQuantity]= useState(1)
     //takes item id, title, price, quantity{set by Quantitybtn}
-    const [ itemToAdd, setItemToAdd]= useState(null);
+    const [ itemToAdd, setItemToAdd]= useState({});
 
     const handleQuantity =(number)=>{
         setQuantity(number)
     }
-    const handleAddItem =()=>{
-        setItemToAdd({id, photo, name, price, quantity})
+    const handleAddItem =(item)=>{
+        //setItemToAdd({id, photo, name, price, quantity})
+        console.log(item);
     }
 
     return(
@@ -32,7 +33,8 @@ const Card = ({id, photo, name, price, info, rating}) =>{
                     <QuantityBtn handleQuantity={handleQuantity} quantity={quantity} className={style.addQuantity} aria-label="Add to cart"/>
                     <button 
                     aria-label="Add to cart"
-                    onClick={handleAddItem}
+                    onClick={()=>handleAddItem({id, photo,name,price, quantity})}
+                    className={style.submitBtn}
                     >add to cart</button>
                 </div>
             )}

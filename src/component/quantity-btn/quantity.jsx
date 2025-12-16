@@ -7,7 +7,8 @@ const QuantityBtn = ({handleQuantity, quantity}) =>{
     const onChangeHandler = (e) =>{
         //setQuantity(Number(e.target.value));
         const input = Number(e.target.value);
-        handleQuantity(input) 
+        //handleQuantity(input) 
+        console.log(input)
     }
     const handleIncrement = () =>{
 
@@ -39,6 +40,7 @@ const QuantityBtn = ({handleQuantity, quantity}) =>{
                    value={quantity}   
                    className={styles.selectorInput}
                    aria-label="Item quantity"
+                   onChange={onChangeHandler}
                    ></input>
 
             <button className={styles.selectorBtn}
