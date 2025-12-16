@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router"
+
 import style from './cart.module.css';
 
 const Cart = () =>{
@@ -8,15 +9,27 @@ const Cart = () =>{
 
     const handleDisplay = () =>{
         if (items.length > 0){
-            return items.map(item=><div>{item.name}</div>)
+            return items.map(item=><div>{item.name} - {item.price}$</div>)
         }else{
             return<div>Cart is empty</div>
         }
  
     }
-    //<div className={style.cartContainer}>{items.length > 0 && items.map(item=> <div>{item.name}</div>)}</div>    
+    const totalCost = () =>{
+        let amount = 0;
+        items.forEach(item=>{
+            amount = amount + item.price
+        })
+        return amount
+    } 
+      
     return(
-         <div className={style.cartContainer}>{handleDisplay()}</div>    
+         <div className={style.cartContainer}>
+            <div>{handleDisplay()}</div>
+            <div className={style.totalCost}>total : {totalCost()}$</div>
+         </div>
+         
+          
     )
 }
 export {

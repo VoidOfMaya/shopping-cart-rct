@@ -4,3 +4,8 @@
     justify-self: center;
     align-self: center;
 }
+.totalCost{
+    outline: 1px solid red;
+    transform: translateY(65px);
+
+}
