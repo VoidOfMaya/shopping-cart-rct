@@ -1,7 +1,7 @@
 import PropType from 'prop-types';
 import styles from './quantity.module.css'
 
-const QuantityBtn = ({handleQuantity, quantity}) =>{
+const QuantityBtn = ({handleQuantity, quantity, cartMode = false , itemId}) =>{
     //const [quantity, setQuantity]= useState(1)
 
     const onChangeHandler = (e) =>{
@@ -9,7 +9,8 @@ const QuantityBtn = ({handleQuantity, quantity}) =>{
         const input = Number(e.target.value);
         //handleQuantity(input) 
         console.log(input)
-    }
+    };
+    //in store page
     const handleIncrement = () =>{
 
         handleQuantity(prev =>{
@@ -18,7 +19,7 @@ const QuantityBtn = ({handleQuantity, quantity}) =>{
             }
             return prev 
         })
-    }
+    };
     const handleDecremnt = () =>{
 
         handleQuantity(prev =>{
@@ -27,13 +28,23 @@ const QuantityBtn = ({handleQuantity, quantity}) =>{
             }
             return prev
         })
-    }
+    };
+    //in cart page
+    const cartIncrementHandlr = () =>{
+        handleQuantity(prev=>{
+            return prev.map(item => item.id === itemId?({...item, quantity: quantity < 20? quantity + 1: quantity}):item)})
+
+    };
+    const cartDecrementHandlr = () =>{
+        handleQuantity(prev=>{
+            return prev.map(item => item.id === itemId?({...item, quantity: quantity > 1? quantity - 1: quantity}):item)})
+    };
     return(
         <div className={styles.selector} 
              aria-label="Select item quantity"
              >
             <button className={styles.selectorBtn}
-                    onClick={handleIncrement}
+                    onClick={()=>{ !cartMode? handleIncrement(): cartIncrementHandlr()}}
                     aria-label="Increase item quantity">+</button>
 
             <input type="number" 
@@ -44,7 +55,7 @@ const QuantityBtn = ({handleQuantity, quantity}) =>{
                    ></input>
 
             <button className={styles.selectorBtn}
-                    onClick={handleDecremnt}
+                    onClick={()=>{ !cartMode? handleDecremnt(): cartDecrementHandlr()}}
                     aria-label="Decrease item quantity">-</button>
         </div>
     )
@@ -52,6 +63,7 @@ const QuantityBtn = ({handleQuantity, quantity}) =>{
 QuantityBtn.PropTyps ={
     quantity: PropType.Number,
     handleQuantity: PropType.func,
+    cartMode: PropType.bool,
 }
 export {
     QuantityBtn,
