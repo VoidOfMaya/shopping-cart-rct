@@ -19,6 +19,7 @@ const Cart = () =>{
     const handleDisplay = () =>{
         if (items.length > 0){
             return items.map(item=>{
+
                 return(
                     <div className={style.cartItem} key={item.id}>
                         <img src={item.photo} style={{height: "100px", objectFit: "contain",}}/>
@@ -57,7 +58,8 @@ const Cart = () =>{
          <div className={style.cartContainer}>
             <div className={style.listContainer}>
                 {handleDisplay()}
-                <div className={style.totalCost}>total : {totalCost()}$</div>    
+                <div className={style.totalCost}
+                     onClick={()=>console.log(items)}>total : {totalCost().toFixed(2)}$</div>    
             </div>
             
          </div>

@@ -7,10 +7,21 @@ const App = () =>{
     const [cartItems, setCartItems]= useState([])
 
     const countItems=()=>{
-        return cartItems.length;
+        return cartItems.reduce((sum,item)=> sum + item.quantity, 0);
     }
-    const addItemToCart = (item) =>{
-        setCartItems((prevItem)=> [...prevItem, item]);
+    const addItemToCart = (newItem) =>{
+        setCartItems(prev=>{
+            const exists = prev.find(item => item.id === newItem.id);
+
+            if(exists){
+                return prev.map(item=>
+                        item.id === newItem.id
+                        ? {...item, quantity: item.quantity + newItem.quantity}
+                        : item
+                )
+            }
+            return[...prev, newItem];
+        });
     }
 
     return(
