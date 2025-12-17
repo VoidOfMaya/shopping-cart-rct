@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+
 import { useOutletContext } from "react-router"
 import { QuantityBtn } from "../quantity-btn/quantity";
 
@@ -53,7 +53,7 @@ const Cart = () =>{
             <div className={style.listContainer}>
                 {handleDisplay()}
                 <div className={style.totalCost}
-                     onClick={()=>console.log(items)}>total : {totalCost().toFixed(2)}$</div>    
+                    aria-label="your total">total : {totalCost().toFixed(2)}$</div>    
             </div>
             
          </div>

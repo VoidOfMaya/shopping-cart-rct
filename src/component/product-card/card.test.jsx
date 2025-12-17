@@ -1,7 +1,7 @@
 import { describe, it, expect, vitest, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { Card } from "./card";
-import { QuantityBtn } from "../quantity-btn/quantity";
+
 import {userEvent} from '@testing-library/user-event'
 
 describe('product card',()=>{
