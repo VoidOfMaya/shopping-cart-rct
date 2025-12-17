@@ -6,18 +6,10 @@ import style from './cart.module.css';
 
 const Cart = () =>{
     const {cartItems, updateCart }= useOutletContext();
-    //const [items, setItems]= useState(cartItems);
 
-    const handleQuantity =(newNumber)=>{
-        //setItems(newNumber)
-        updateCart(newNumber)
-        
-    }
-    const handleDelet = (id) =>{
-        //console.log(items)
-        //setItems(prev=> prev.filter(item => item.id !== id ))
-        updateCart(prev=> prev.filter(item => item.id !== id ))
-    }
+    const handleQuantity =(newNumber)=>{updateCart(newNumber)}
+
+    const handleDelet = (id) =>{updateCart(prev=> prev.filter(item => item.id !== id ))}
 
     const handleDisplay = () =>{
         if (cartItems.length > 0){

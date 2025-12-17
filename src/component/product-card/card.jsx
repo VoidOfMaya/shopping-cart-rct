@@ -7,7 +7,7 @@ import style from './card.module.css';
 const Card = ({id, photo, name, price, info, rating}) =>{
 
     const [hover, setHover]= useState(false)
-    const [quantity, setQuantity]= useState(1)    //handles quantity state for quantitybtn
+    const [quantity, setQuantity]= useState(1) 
     //cartcontext
     const { addItemToCart} = useOutletContext();
 
@@ -15,9 +15,8 @@ const Card = ({id, photo, name, price, info, rating}) =>{
         setQuantity(number)
     }
     const handleAddItem =(item)=>{
-        //setItemToAdd({id, photo, name, price, quantity})
+
         addItemToCart(item)
-        console.log(item);
     }
 
     return(
