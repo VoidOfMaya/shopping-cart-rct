@@ -11,8 +11,9 @@ const Cart = () =>{
     const handleQuantity =(newNumber)=>{
         setItems(newNumber)
     }
-    const handleDelet = () =>{
+    const handleDelet = (id) =>{
         console.log(items)
+        setItems(prev=> prev.filter(item => item.id !== id ))
     }
 
     const handleDisplay = () =>{
@@ -27,7 +28,11 @@ const Cart = () =>{
                                      itemId={item.id}/>
                         <div className={style.priceTag}>{item.price}$</div>
                         <button className={style.deletItem}
-                                onClick={handleDelet}>Delet item</button>
+                                type="button"
+                                onClick={(e)=>{
+                                    e.preventDefault();
+                                    handleDelet(item.id)
+                                    }}>Delet item</button>
                     </div>
                 )
             })
