@@ -5,20 +5,23 @@ import { QuantityBtn } from "../quantity-btn/quantity";
 import style from './cart.module.css';
 
 const Cart = () =>{
-    const {cartItems }= useOutletContext();
-    const [items, setItems]= useState(cartItems);
+    const {cartItems, updateCart }= useOutletContext();
+    //const [items, setItems]= useState(cartItems);
 
     const handleQuantity =(newNumber)=>{
-        setItems(newNumber)
+        //setItems(newNumber)
+        updateCart(newNumber)
+        
     }
     const handleDelet = (id) =>{
-        console.log(items)
-        setItems(prev=> prev.filter(item => item.id !== id ))
+        //console.log(items)
+        //setItems(prev=> prev.filter(item => item.id !== id ))
+        updateCart(prev=> prev.filter(item => item.id !== id ))
     }
 
     const handleDisplay = () =>{
-        if (items.length > 0){
-            return items.map(item=>{
+        if (cartItems.length > 0){
+            return cartItems.map(item=>{
 
                 return(
                     <div className={style.cartItem} key={item.id}>
@@ -48,12 +51,11 @@ const Cart = () =>{
     }
     const totalCost = () =>{
         let amount = 0;
-        items.forEach(item=>{
+        cartItems.forEach(item=>{
             amount = amount + (item.price * item.quantity)
         })
         return amount
-    } 
-      
+    }   
     return(
          <div className={style.cartContainer}>
             <div className={style.listContainer}>

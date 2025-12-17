@@ -23,12 +23,15 @@ const App = () =>{
             return[...prev, newItem];
         });
     }
+    const updateCart = (updatedList) =>{
+        setCartItems(updatedList);
+    }
 
     return(
         <div className='appContainer'>
             <TopNav cart={countItems()}/>
             <div className='pageContainer'>
-                <Outlet context={{cartItems, addItemToCart}}/>
+                <Outlet context={{cartItems, addItemToCart, updateCart}}/>
             </div>
             <footer>Footer holder</footer>
         </div>
