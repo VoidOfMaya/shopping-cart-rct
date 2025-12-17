@@ -11,6 +11,9 @@ const Cart = () =>{
     const handleQuantity =(newNumber)=>{
         setItems(newNumber)
     }
+    const handleDelet = () =>{
+        console.log(items)
+    }
 
     const handleDisplay = () =>{
         if (items.length > 0){
@@ -23,12 +26,17 @@ const Cart = () =>{
                                      cartMode={true} 
                                      itemId={item.id}/>
                         <div className={style.priceTag}>{item.price}$</div>
-                        <button>Delete item</button>
+                        <button className={style.deletItem}
+                                onClick={handleDelet}>Delet item</button>
                     </div>
                 )
             })
         }else{
-            return<div>Cart is empty</div>
+            return  <div style={ 
+                        {textAlign: "center",
+                        fontSize: "larger",
+                        color:"#939394ff",
+                    }}>Cart is empty</div>
         }
  
     }
