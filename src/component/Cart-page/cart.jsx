@@ -14,7 +14,19 @@ const Cart = () =>{
 
     const handleDisplay = () =>{
         if (items.length > 0){
-            return items.map(item=><div key={item.id}>{item.name} - {item.price}$  <QuantityBtn handleQuantity={handleQuantity} quantity={item.quantity} cartMode={true} itemId={item.id}/></div>)
+            return items.map(item=>{
+                return(
+                    <div className={style.cartItem} key={item.id}>
+                        <img src={item.photo} style={{height: "100px", objectFit: "contain",}}/>
+                        <QuantityBtn handleQuantity={handleQuantity} 
+                                     quantity={item.quantity} 
+                                     cartMode={true} 
+                                     itemId={item.id}/>
+                        <div className={style.priceTag}>{item.price}$</div>
+                        <button>Delete item</button>
+                    </div>
+                )
+            })
         }else{
             return<div>Cart is empty</div>
         }
@@ -30,8 +42,11 @@ const Cart = () =>{
       
     return(
          <div className={style.cartContainer}>
-            <div>{handleDisplay()}</div>
-            <div className={style.totalCost}>total : {totalCost()}$</div>
+            <div className={style.listContainer}>
+                {handleDisplay()}
+                <div className={style.totalCost}>total : {totalCost()}$</div>    
+            </div>
+            
          </div>
          
           
