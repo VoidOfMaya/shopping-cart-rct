@@ -7,19 +7,19 @@
         - page content up to the developer
 
     * Shop page
-        - product card containing {photo,name,price, amazon style quantity field= +(input)-, addToCartBtn}
+        - product card containing {photo,name,price, amazon style quantity field= +(input)-, addToCartBtn} -complete
 
     * cart bag/checkout
-        - display cart items + item quantity
-        - enable quantity increas and decrease
-        - remove item from cart functionality
+        - display cart items + item quantity -complete
+        - enable quantity increas and decrease -complete
+        - remove item from cart functionality -complete
         - !IMPORTANT! no checkout/payment system required
 
 - fixed top navigation bar
     * if cart has 1 item or more display quantity of cart items in a small icon next to the link/icon in the nav bar
-      this shoud update in real time
+      this shoud update in real time -complete
 
-- fetch items from fakestoreAPi
+- fetch items from fakestoreAPi -complete
 
 - handle proper property typing
 
