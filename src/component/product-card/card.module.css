@@ -43,7 +43,8 @@
 }
 
 .submitBtn{
-    background-color: #FFC107;
+    background: #FFC107;
+    background: linear-gradient(0deg,rgba(255, 193, 7, 1) 0%, rgba(255, 213, 87, 1) 100%);
     padding: 10px;
     color: #F8F9FA;
     border-radius: 0px 0px 20px 20px;
@@ -51,7 +52,8 @@
     transition: transform .1s ease-out;
 }
 .submitBtn:hover{
-    background-color: #28A745;
+    background: #28A745;
+    background: linear-gradient(0deg,rgba(40, 167, 69, 1) 0%, rgb(12, 204, 57) 100%);
     color: #FFFFFF;
     transform: scale(1 ,1.1);
 }
@@ -67,6 +69,7 @@
         width: 100%;
     }
     .submitBtn{
+        font-size: larger;
         padding: 20px 0px 20px 0px;
     }
 }

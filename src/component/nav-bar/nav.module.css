@@ -44,7 +44,9 @@ nav {
     
 }
 a:hover{
-    background-color: rgb(123, 191, 255);
+    background: #7BBFFF;
+    background: linear-gradient(0deg,rgba(123, 191, 255, 1) 0%, rgba(68, 126, 227, 1) 100%);
+
     
 }
 .navIcons{
