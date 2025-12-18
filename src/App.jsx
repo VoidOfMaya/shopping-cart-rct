@@ -2,6 +2,7 @@ import './component/styles/global.css'
 import { TopNav } from './component/nav-bar/top-nav'
 import { Outlet } from 'react-router'
 import { useState } from 'react'
+import { Footer } from './component/footer/footer'
 
 const App = () =>{
     const [cartItems, setCartItems]= useState([])
@@ -33,7 +34,7 @@ const App = () =>{
             <div className='pageContainer'>
                 <Outlet context={{cartItems, addItemToCart, updateCart}}/>
             </div>
-            <footer>Footer holder</footer>
+            <Footer />
         </div>
     )
 }

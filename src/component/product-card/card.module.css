@@ -53,5 +53,5 @@
 .submitBtn:hover{
     background-color: #28A745;
     color: #FFFFFF;
-    transform: scale(1.08);
+    transform: scale(1 ,1.1);
 }

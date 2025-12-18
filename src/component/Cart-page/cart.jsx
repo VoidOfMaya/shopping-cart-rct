@@ -49,14 +49,14 @@ const Cart = () =>{
         return amount
     }   
     return(
-         <div className={style.cartContainer}>
+         <section className={style.cartContainer}>
             <div className={style.listContainer}>
                 {handleDisplay()}
                 <div className={style.totalCost}
                     aria-label="your total">total : {totalCost().toFixed(2)}$</div>    
             </div>
             
-         </div>
+         </section>
          
           
     )
