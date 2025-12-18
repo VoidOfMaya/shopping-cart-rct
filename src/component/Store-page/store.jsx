@@ -50,13 +50,15 @@ const Store = () =>{
         return <LoadingSpinner />
     }
     return(
-        <div className={style.storePage}>
+        <section className={style.pageContainer}>
+            <div className={style.storePage} >
 
-            <h1 className={style.title}>Store Page: </h1>
-            <div className={style.cardContainer}>
-                {products && handleCards(products)} 
+                <div className={style.title}>Store Page:</div>
+                <div className={style.cardContainer}>
+                    {products && handleCards(products)} 
+                </div>
             </div>
-        </div>
+        </section>
     )
 }
 export {

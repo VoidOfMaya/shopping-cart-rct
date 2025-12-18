@@ -22,10 +22,11 @@ const Card = ({id, photo, name, price}) =>{
     return(
         <div className={style.card}
              aria-label='card-element'>
+            <h2 className={style.price} aria-label='product price'>{price}$</h2>
             <img src={photo} alt={name + ' photo'} className={style.photo}></img>
             <div className={style.cardInfo}>
                 <h3 className={style.name}>{name}</h3>
-                <h2 className={style.price} aria-label='product price'>{price}$</h2>
+                
             </div>
                 <div className={style.addToCart}>
                     <QuantityBtn 

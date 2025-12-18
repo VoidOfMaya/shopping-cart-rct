@@ -19,18 +19,18 @@
     object-fit: contain;
     margin-bottom:  10px;
 }
-.cardInfo{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 1fr;
 
-}
 .name{
-    justify-self: center;
+    text-align: center;
+    white-space: nowrap;        
+    overflow: hidden;           
+    text-overflow: ellipsis;    
 }
 .price{
+    text-align: center;
     color: #28A745;
-    text-align: end;
+    
+    
 }
 .addToCart{
     margin-top: 10px;
@@ -40,9 +40,6 @@
 .card:hover{
     z-index: 1;
     transform:scale(1.1);
-}
-.addQuantity{
-    width: 330px;
 }
 
 .submitBtn{
