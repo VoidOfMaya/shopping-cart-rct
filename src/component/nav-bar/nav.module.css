@@ -1,31 +1,47 @@
 nav {
     z-index: 2;
     position: fixed;
-    background-color: #007BFF;
+    /*background-color: #007BFF;*/
+    background: #007BFF;
+    background: linear-gradient(94deg,rgba(0, 123, 255, 1) 0%, rgba(43, 79, 207, 1) 100%);
     display: flex;
     flex-direction: row;
 }
 .branding{
     margin-right: 40%;
     align-self:center ;
+    color: #ffff;
+    margin-left: 10px;
 }
 .navLink{
     padding: 20px;
-    color: #FFFFFF;
+    color: #ffff;
     justify-self: center;
     text-align: center;
+    transform: scale(1);
+    transition: transform .1s ease;
     
 }
+.navLink:hover{
+    transform: scale(1, 1.1);
+}
 .cartItems{
+    z-index: 1;
     position: absolute;
     width: 30px;
     height: 30px;
-    transform:  translate(55px, 5px);
+    transform:  translate(73px, -15px);
     border-radius: 15px;
-    background-color: red;
+    color: #ffffff;
+    
     
 }
 a:hover{
     background-color: rgb(123, 191, 255);
     
 }
+.navIcons{
+    height: 30px;
+    filter: invert(1);
+}
+
