@@ -1,12 +1,30 @@
 footer{
-    display: grid;
-    flex-direction: column;
     background: #343A40;
     background: linear-gradient(94deg,rgba(52, 58, 64, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    transform: translateY(65px);
+}
+.compContainer{
+    justify-items: center;
+    justify-self: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
     color: #F8F9FA;
-
+    padding: 20px; 
+    max-width: 1500px;
 }
 .footerContainer{
+
+}
+.footerContact{
     display: grid;
-    justify-self: center;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr ;
+
+}
+.footerIcon{
+    filter: invert(1);
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
 }
