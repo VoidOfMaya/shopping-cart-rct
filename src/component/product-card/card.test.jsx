@@ -55,10 +55,11 @@ describe('product card',()=>{
         const {user, addItemToCart} = renderCard();
         const card = screen.getByLabelText('card-element');
         await user.hover(card)
-        await user.click(screen.getByRole('button',{name: /mock quantity/i}))
 
-        const addBtn = screen.getByLabelText( /add to cart/i)
-        await user.click(addBtn)
+        await fireEvent.click(screen.getByRole('button',{name: /mock quantity/i}))
+        
+ 
+        await user.click(screen.getByRole('button',{name: /add to cart/i}))
         
         expect(addItemToCart).toHaveBeenCalledWith({
             id: 1, 
