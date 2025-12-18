@@ -31,9 +31,9 @@ const App = () =>{
     return(
         <div className='appContainer'>
             <TopNav cart={countItems()}/>
-            <div className='pageContainer'>
+            <main className='pageContainer'>
                 <Outlet context={{cartItems, addItemToCart, updateCart}}/>
-            </div>
+            </main>
             <Footer />
         </div>
     )

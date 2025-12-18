@@ -120,5 +120,14 @@ b {
   display: inline-block;
 }
  /*=================================*/
+
+.appContainer{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color:#F8F9FA ;
+}
 .pageContainer{
+  flex: 1;           
+  overflow-x: hidden;
 }
