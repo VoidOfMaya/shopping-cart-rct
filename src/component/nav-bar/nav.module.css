@@ -11,9 +11,10 @@ nav {
     margin-right: 40%;
     align-self:center ;
     color: #ffff;
-    margin-left: 10px;
+    margin-left: 40px;
 }
 .navLink{
+    display: relative;
     padding: 20px;
     color: #ffff;
     justify-self: center;
@@ -30,7 +31,8 @@ nav {
     position: absolute;
     width: 30px;
     height: 30px;
-    transform:  translate(73px, -15px);
+    justify-self: center;
+    top: 5px;
     border-radius: 15px;
     color: #ffffff;
     

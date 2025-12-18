@@ -15,10 +15,10 @@ const TopNav = ({cart}) =>{
             <Link to={'Store'} className={style.navLink}>
             <img className={style.navIcons} src={shopSvg} alt="Shop"/>
             Store</Link>
-            <Link to={'Cart'} className={style.navLink}>
+            <Link to={'Cart'} className={style.navLink} >
             <div className={style.cartItems}>{cart}</div>
-
             <img  className={style.navIcons} src={cartDvg} alt="Cart"/>
+            
             Cart
             </Link>
             
