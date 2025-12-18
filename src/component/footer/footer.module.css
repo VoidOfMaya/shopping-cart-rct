@@ -1,0 +1,11 @@
+footer{
+    display: grid;
+    flex-direction: column;
+    background-color: #343A40;
+    color: #F8F9FA;
+
+}
+.footerContainer{
+    display: grid;
+    justify-self: center;
+}
