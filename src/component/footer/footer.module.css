@@ -2,6 +2,7 @@ footer{
     background: #343A40;
     background: linear-gradient(94deg,rgba(52, 58, 64, 1) 0%, rgba(0, 0, 0, 1) 100%);
     transform: translateY(65px);
+
 }
 .compContainer{
     justify-items: center;
