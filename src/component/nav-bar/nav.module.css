@@ -1,9 +1,13 @@
-nav {
+.navBar{
     z-index: 2;
     position: fixed;
-    /*background-color: #007BFF;*/
     background: #007BFF;
-    background: linear-gradient(94deg,rgba(0, 123, 255, 1) 0%, rgba(43, 79, 207, 1) 100%);
+    background: linear-gradient(94deg,rgba(0, 123, 255, 1) 0%, rgba(43, 79, 207, 1) 100%);   
+    display: flex;
+    
+}
+nav {
+
     display: flex;
     flex-direction: row;
 }
@@ -23,6 +27,7 @@ nav {
     transition: transform .1s ease;
     
 }
+
 .navLink:hover{
     transform: scale(1, 1.1);
 }
@@ -45,5 +50,15 @@ a:hover{
 .navIcons{
     height: 30px;
     filter: invert(1);
+}
+@media (max-width: 610px) {
+    .navBar{
+        width: 100vw;
+    }
+
+    .branding{
+        display: none;
+    }
+
 }
 
