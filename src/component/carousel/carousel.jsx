@@ -1,5 +1,6 @@
 import style from './carousel.module.css';
 import { useState, useEffect } from 'react';
+import { Link } from "react-router"
 import dotSvg from '/src/assets/icons/circle-small.svg'
 
 //importing photo sets
@@ -21,7 +22,7 @@ const Carousel = () =>{
     useEffect(()=>{
         const interval = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % slides.length);
-        }, 10000);
+        }, 20000);
         return () => clearInterval(interval);
     },[]);
     const prevSlide = () => {
@@ -69,7 +70,9 @@ const Carousel = () =>{
                     <img src={dotSvg} className={index === currentIndex ? style.dotActive: '' } />
                 </div>
             ))}
-        </div> 
+            </div> 
+             {/*shop now!*/}
+            <Link  to={'Store'} className={style.callToAction}>Shop Now!</Link>
         </div>
         
     )
