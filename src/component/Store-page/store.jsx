@@ -1,6 +1,7 @@
 import style from './store.module.css';
 import { Card } from '../product-card/card';
 import { useEffect, useState } from 'react';
+import { Loading } from '../loading/load';
 
 const Store = () =>{
     
@@ -26,7 +27,7 @@ const Store = () =>{
         ))
  
     }
-    const LoadingSpinner = () => <div>Loading...</div>
+    const LoadingSpinner = () => <Loading/>
 
     useEffect(()=>{
 
