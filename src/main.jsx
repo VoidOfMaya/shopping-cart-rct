@@ -5,6 +5,7 @@ import { Home } from './component/Home-page/home'
 import { Store } from './component/Store-page/store'
 import { Cart } from './component/Cart-page/cart'
 import { App } from './App'
+import { NotFound } from './component/404page/notFound'
 
 //handle page routing
 
@@ -15,7 +16,7 @@ const router =createBrowserRouter([
       { path: 'Store', element: <Store />},
       { path: 'Cart', element: <Cart />},
     ],
-    errorElement:<div> Error 404!</div>},
+    errorElement:<NotFound />},
 
   //otherpages go here
 ])

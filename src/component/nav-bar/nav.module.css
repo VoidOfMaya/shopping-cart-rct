@@ -3,6 +3,7 @@
     position: fixed;
     background: #007BFF;
     background: linear-gradient(94deg,rgba(0, 123, 255, 1) 0%, rgba(43, 79, 207, 1) 100%);   
+    box-shadow: 6px 5px 37px -19px rgba(66, 68, 90, 1);
     display: flex;
     
 }
