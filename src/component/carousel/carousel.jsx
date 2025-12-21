@@ -1,5 +1,6 @@
 import style from './carousel.module.css';
 import { useState, useEffect } from 'react';
+import dotSvg from '/src/assets/icons/circle-small.svg'
 
 //importing photo sets
 import {
@@ -37,15 +38,16 @@ const Carousel = () =>{
 
     return(
         <div className={style.carousel}>
-          {slides.map((SlidePhoto, index)=>(
             <div
-            key={index}
-              className={`${style.carouselSlide} ${index === currentIndex ? style.active : ""}`}
-              style={{display: index === currentIndex ? "block" : "none" }}
-              >
-                <SlidePhoto />
-              </div>
-          ))} 
+                className={style.track}
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+                {slides.map((SlidePhoto, index) => (
+                <div key={index} className={style.carouselSlide}>
+                    <SlidePhoto />
+                </div>
+                ))}
+            </div>
             {/* Arrows */}
             <button className={style.arrowLeft} onClick={prevSlide}>
             &#10094;
@@ -64,7 +66,7 @@ const Carousel = () =>{
                     onMouseOver={(e) => (e.target.innerText = "O")}
                     onMouseOut={(e) => (e.target.innerText = index === currentIndex ? "O" : "o")}
                 >
-                    {index === currentIndex ? "O" : "o"}
+                    <img src={dotSvg} className={index === currentIndex ? style.dotActive: '' } />
                 </div>
             ))}
         </div> 
