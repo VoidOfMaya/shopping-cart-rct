@@ -1,6 +1,6 @@
 import style from './footer.module.css'
-import mailSvg from '/src/assets/email-fast-outline.svg'
-import phoneSvg from '/src/assets/phone (1).svg'
+import mailSvg from '/src/assets/icons/email-fast-outline.svg'
+import phoneSvg from '/src/assets/icons/phone (1).svg'
 const Footer =()=>{
     return(
         <footer>

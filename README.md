@@ -1,5 +1,7 @@
 # React Shopping cart
     project source: https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart
+    photo source: https://unsplash.com/
+    api: https://fakestoreapi.com/
 
 ## Project requirments:-
 - project has three pages

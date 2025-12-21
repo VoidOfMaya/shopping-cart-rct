@@ -1,5 +1,5 @@
 import style from './loading.module.css';
-import load from '/src/assets/loading.svg'
+import load from '/src/assets/icons/loading.svg'
 const Loading = () =>{
     return (
         <div className={style.LoadeContainer}>

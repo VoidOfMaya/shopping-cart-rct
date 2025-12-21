@@ -6,7 +6,6 @@ import { Store } from './component/Store-page/store'
 import { Cart } from './component/Cart-page/cart'
 import { App } from './App'
 import { NotFound } from './component/404page/notFound'
-import { Loading } from './component/loading/load'
 
 //handle page routing
 

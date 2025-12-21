@@ -1,8 +1,8 @@
 import { Link } from "react-router"
 import style from'./nav.module.css'
-import cartDvg from '/src/assets/cart-outline.svg'
-import homeSvg from '/src/assets/home (1).svg'
-import shopSvg from '/src/assets/shopping.svg'
+import cartDvg from '/src/assets/icons/cart-outline.svg'
+import shopSvg from '/src/assets/icons/shopping.svg'
+import homeSvg from '/src/assets/icons/home (1).svg'
 
 const TopNav = ({cart}) =>{
 
