@@ -4,3 +4,44 @@
     height: 100%;
     object-fit: cover;
 }
+.arrowLeft{
+    position: absolute;
+    top: 400px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(231, 231, 231, .2);
+    border-radius: 40px;
+}
+.arrowLeft:hover{
+    background-color: rgb(255, 255, 255); 
+}
+.arrowRight{
+    position: absolute;
+    top: 400px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(231, 231, 231, .2);
+    border-radius: 40px;
+}
+.arrowRight:hover{
+    background-color: rgba(231, 231, 231, 1); 
+}
+.dotsContainer{
+    position: relative;
+    display: flex;
+    width: max-content;
+    justify-self: center;
+    top: -200px;
+    
+
+}
+.dot{
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: rgb(231, 231, 231);
+    border-color: 20px;
+    width: max-content;
+    height: max-content;
+}
