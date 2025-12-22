@@ -2,6 +2,7 @@ import style from './store.module.css';
 import { Card } from '../product-card/card';
 import { useEffect, useState } from 'react';
 import { Loading } from '../loading/load';
+import {Footer} from "../footer/footer.jsx";
 
 const Store = () =>{
     
@@ -59,6 +60,7 @@ const Store = () =>{
                     {products && handleCards(products)} 
                 </div>
             </div>
+            <Footer />
         </section>
     )
 }
