@@ -1,4 +1,5 @@
 .aboutUs{
+    color: black;
     position: relative;
     bottom: 300px;
     padding-bottom: 20px;
@@ -8,5 +9,6 @@
     position: relative;
     bottom: 500px;
     padding-bottom: 20px;
+    margin: 5px;
 }
 }
