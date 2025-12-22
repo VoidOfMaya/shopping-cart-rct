@@ -1,6 +1,7 @@
 
 import { useOutletContext } from "react-router"
 import { QuantityBtn } from "../quantity-btn/quantity";
+import {Footer} from "../footer/footer.jsx";
 
 import style from './cart.module.css';
 
@@ -56,6 +57,7 @@ const Cart = () =>{
                     aria-label="your total">total : {totalCost().toFixed(2)}$</div>    
             </div>
             
+            <Footer />
          </section>
          
           
