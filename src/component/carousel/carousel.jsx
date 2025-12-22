@@ -10,6 +10,7 @@ import {
     shoesSlide,
     watchSlide,    
 } from './photosset'
+import { About } from '../aboutUs/aboutUs';
 
 const Carousel = () =>{
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,27 +46,19 @@ const Carousel = () =>{
             >
                 {slides.map((SlidePhoto, index) => (
                 <div key={index} className={style.carouselSlide}>
-                    <SlidePhoto />
+                    <SlidePhoto/>
                 </div>
                 ))}
             </div>
             {/* Arrows */}
-            <button className={style.arrowLeft} onClick={prevSlide}>
-            &#10094;
-            </button>
-            <button className={style.arrowRight} onClick={nextSlide}>
-            &#10095;
-            </button>
+            <button className={style.arrowLeft} onClick={prevSlide}>&#10094;</button>
+            <button className={style.arrowRight} onClick={nextSlide}>&#10095;</button>
 
         {/* Dots */}
             <div className={style.dotsContainer}>
                 {slides.map((_, index) => (
-                <div
-                    key={index}
-                    className={`${style.dot} ${index === currentIndex ? style.active : ""}`}
+                <div key={index} className={`${style.dot} ${index === currentIndex ? style.active : ""}`}
                     onClick={() => goToSlide(index)}
-                    onMouseOver={(e) => (e.target.innerText = "O")}
-                    onMouseOut={(e) => (e.target.innerText = index === currentIndex ? "O" : "o")}
                 >
                     <img src={dotSvg} className={index === currentIndex ? style.dotActive: '' } />
                 </div>
@@ -73,6 +66,8 @@ const Carousel = () =>{
             </div> 
              {/*shop now!*/}
             <Link  to={'Store'} className={style.callToAction}>Shop Now!</Link>
+            {/*about us */}
+            <About />
         </div>
         
     )

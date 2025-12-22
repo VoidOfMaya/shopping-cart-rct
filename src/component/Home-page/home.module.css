@@ -1,14 +1,15 @@
 .homePage{
-    transform: translateY(85px);
+    position: relative;
     font-size: larger;
     text-align: center;
+    height: max-content;
 
 }
 
 .headerTitle{
     color: #fff;
     padding: 50px;
-   
+    top:90px;
     background-image: linear-gradient(180deg, rgba(0, 123, 255, 1), rgba(247, 247, 247, 0) );
     position: relative; /* or absolute depending on effect */
     z-index: 1; 

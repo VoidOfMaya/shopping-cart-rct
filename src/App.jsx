@@ -34,7 +34,6 @@ const App = () =>{
             <main className='pageContainer'>
                 <Outlet context={{cartItems, addItemToCart, updateCart}}/>
             </main>
-            <Footer />
         </div>
     )
 }

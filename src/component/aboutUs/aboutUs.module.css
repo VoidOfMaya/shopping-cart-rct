@@ -1,5 +1,12 @@
 .aboutUs{
-    position: absolute;
-    top: 860px;
+    position: relative;
+    bottom: 300px;
     padding-bottom: 20px;
+}
+@media (max-width: 610px){
+    .aboutUs{
+    position: relative;
+    bottom: 500px;
+    padding-bottom: 20px;
+}
 }
