@@ -26,6 +26,9 @@
     overflow: hidden;           
     text-overflow: ellipsis;    
 }
+.addQuantity{
+    justify-items: center;
+}
 .price{
     text-align: center;
     color: #28A745;
