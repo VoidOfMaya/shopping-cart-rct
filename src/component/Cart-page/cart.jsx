@@ -56,8 +56,8 @@ const Cart = () =>{
                 <div className={style.totalCost}
                     aria-label="your total">total : {totalCost().toFixed(2)}$</div>    
             </div>
+            <div className={style.footerEl}><Footer /></div>
             
-            <Footer />
          </section>
          
           

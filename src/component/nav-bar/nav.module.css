@@ -64,9 +64,7 @@ a:hover{
     }
     .cartItems{
         justify-self: center;
-
-    
-    
+        text-align: center;
     }
 
 }
