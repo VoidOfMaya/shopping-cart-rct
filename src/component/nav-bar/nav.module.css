@@ -62,6 +62,12 @@ a:hover{
     .branding{
         display: none;
     }
+    .cartItems{
+        justify-self: center;
+
+    
+    
+    }
 
 }
 
