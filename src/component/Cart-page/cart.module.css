@@ -65,6 +65,10 @@
    
     transform: scale(1.1);
 }
+.footerEl{
+    position: relative;
+    bottom: 0px;
+}
 @media (max-width: 700px){
     .cartContainer{
         margin-top: 70px;
@@ -97,8 +101,14 @@
    
     transform: scale(1,1.1);
     }
-    .footerEl{
-        position: absolute;
-        bottom: 0px;
+    .totalCost{
+
+        transform: translateY(none);
+        margin-bottom: 100px;
+
+        
+   
+
     }
+
 }
